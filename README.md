@@ -1,12 +1,16 @@
 # jupyterlab-base
 Jupyter Lab base Docker container recipe based on [Jupyter datascience-notebook](https://hub.docker.com/r/jupyter/datascience-notebook) for [CyVerse VICE](https://cyverse-visual-interactive-computing-environment.readthedocs-hosted.com/en/latest/index.html). VICE requires additional configuration files to be compatible with our Condor and Kubernetes orchestration. 
 
+[![CircleCI](https://circleci.com/gh/cyverse-vice/jupyterlab-base.svg?style=svg)](https://circleci.com/gh/cyverse-vice/jupyterlab-base)[![license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://opensource.org/licenses/GPL-3.0)
 [![Project Supported by CyVerse](https://img.shields.io/badge/Supported%20by-CyVerse-blue.svg)](https://www.cyverse.org) [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
-image            | description                               | size   | metrics | build status 
----------------- | ----------------------------------------- | ------ | ------- | --------------
-[![DockerHub](https://img.shields.io/badge/DockerHub-brightgreen.svg?style=popout&logo=Docker)](https://hub.docker.com/r/cyversevice/jupyterlab-base) | Jupyter Lab Base latest | [![](https://images.microbadger.com/badges/image/cyversevice/jupyterlab-base.svg)](https://microbadger.com/images/cyversevice/jupyterlab-base) | [![](https://img.shields.io/docker/pulls/cyversevice/jupyterlab-base.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base)  |  [![](https://img.shields.io/docker/automated/cyversevice/jupyterlab-base.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base/builds)
-[![VICE](https://img.shields.io/badge/CyVerse-VICE-blue.svg?style=popout&logo=Docker&color=#1488C6)]()| JupyterLab Base | [![](https://images.microbadger.com/badges/image/cyversevice/jupyterlab-base.svg)](https://microbadger.com/images/cyversevice/jupyterlab-base) | [![](https://img.shields.io/docker/pulls/cyversevice/jupyterlab-base.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base)  |  [![](https://img.shields.io/docker/automated/cyversevice/jupyterlab-base.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-basebuilds)
+image | tag | size | metrics | build | status |  
+----- | --- | ---- | ------- | ------|--------|
+[![DockerHub](https://img.shields.io/badge/DockerHub-brightgreen.svg?style=popout&logo=Docker)](https://hub.docker.com/r/cyversevice/jupyterlab-base) | [![](https://images.microbadger.com/badges/version/cyversevice/jupyterlab-base.svg)](https://microbadger.com/images/cyversevice/jupyterlab-base "latest") |  [![](https://images.microbadger.com/badges/image/cyversevice/jupyterlab-base.svg)](https://microbadger.com/images/cyversevice/jupyterlab-base "latest") | [![](https://img.shields.io/docker/pulls/cyversevice/jupyterlab-base.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base)  |  [![](https://img.shields.io/docker/cloud/automated/cyversevice/jupyterlab-base.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base/builds) | [![](https://img.shields.io/docker/build/cyversevice/jupyterlab-base.svg)](https://cloud.docker.com/u/cyversevice/repository/docker/cyversevice/jupyterlab-base)
+
+image | tag | size | metrics | build |
+----- | ----| ---- | ------- | ------|
+[![VICE](https://img.shields.io/badge/CyVerse-VICE-blue.svg?style=popout&logo=Docker&color=#1488C6)]()| [![](https://images.microbadger.com/badges/version/cyversevice/jupyterlab-base.svg)](https://microbadger.com/images/cyversevice/jupyterlab-base "latest") | [![](https://images.microbadger.com/badges/image/cyversevice/jupyterlab-base.svg)](https://microbadger.com/images/cyversevice/jupyterlab-base) | [![](https://img.shields.io/docker/pulls/cyversevice/jupyterlab-base/latest.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base)  |  [![](https://img.shields.io/docker/automated/cyversevice/jupyterlab-base.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base)
 
 # Instructions
 
@@ -35,5 +39,5 @@ Unless you plan on making changes to this container, you should just use the exi
 To test the container locally:
 
 ```
-docker run -it --rm -v /$HOME:/app --workdir /app -p 8888:80 -e REDIRECT_URL=http://localhost:8888 cyversevice/jupyterlab-base:latest
+docker run -it --rm -v /$HOME:/app --workdir /app -p 8888:8888 -e REDIRECT_URL=http://localhost:8888 cyversevice/jupyterlab-base:latest
 ```
