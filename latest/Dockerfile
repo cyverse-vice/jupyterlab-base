@@ -23,15 +23,15 @@ USER jovyan
 
 # install foundational jupyter lab
 RUN conda update -n base conda \
-    && conda install jupyterlab=0.35.4 \
+    && conda install jupyterlab \
     && conda clean -tipsy \
     && fix-permissions $CONDA_DIR
 
 # install jupyterlab hub-extension, lab-manager, bokeh, google-drive
 RUN jupyter lab --version \
-    && jupyter labextension install @jupyterlab/hub-extension@0.12.0 \
-                                    @jupyter-widgets/jupyterlab-manager@0.38.1 \
-                                    jupyterlab_bokeh@0.6.3 \
+    && jupyter labextension install @jupyterlab/hub-extension \
+                                    @jupyter-widgets/jupyterlab-manager \
+                                    jupyterlab_bokeh \
                                     @jupyterlab/google-drive
 
 # install jupyterlab git extension
@@ -40,9 +40,9 @@ RUN jupyter labextension install @jupyterlab/git && \
     jupyter serverextension enable --py jupyterlab_git
 
 # install the irods plugin for jupyter lab
-RUN pip install jupyterlab_irods==2.0.1 \
+RUN pip install jupyterlab_irods==2.0.6 \
     && jupyter serverextension enable --py jupyterlab_irods \
-    && jupyter labextension install ijab@2.0.1
+    && jupyter labextension install ijab@2.0.6
 
 ENTRYPOINT ["jupyter"]
 CMD ["lab", "--no-browser"]
