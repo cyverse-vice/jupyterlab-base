@@ -9,7 +9,7 @@ image | tag | size | metrics | build | status |
 
 image | tag | size | metrics | build |
 ----- | ----| ---- | ------- | ------|
-[![VICE](https://img.shields.io/badge/CyVerse-VICE-blue.svg?style=popout&logo=Docker&color=#1488C6)]()| [![](https://images.microbadger.com/badges/version/cyversevice/jupyterlab-base.svg)](https://microbadger.com/images/cyversevice/jupyterlab-base "latest") | [![](https://images.microbadger.com/badges/image/cyversevice/jupyterlab-base.svg)](https://microbadger.com/images/cyversevice/jupyterlab-base) | [![](https://img.shields.io/docker/pulls/cyversevice/jupyterlab-base/latest.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base)  |  [![](https://img.shields.io/docker/automated/cyversevice/jupyterlab-base.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base)
+<a href="https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=19f6a94b-71b6-4034-a7a5-40f7bea0b85b&app-id=75773c76-8ee1-11e9-907f-008cfa5ae621" target="_blank"><img src="https://de.cyverse.org/Powered-By-CyVerse-blue.svg"></a> | [![](https://images.microbadger.com/badges/version/cyversevice/jupyterlab-base.svg)](https://microbadger.com/images/cyversevice/jupyterlab-base "latest") | [![](https://images.microbadger.com/badges/image/cyversevice/jupyterlab-base.svg)](https://microbadger.com/images/cyversevice/jupyterlab-base) | [![](https://img.shields.io/docker/pulls/cyversevice/jupyterlab-base/latest.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base)  |  [![](https://img.shields.io/docker/automated/cyversevice/jupyterlab-base.svg)](https://hub.docker.com/r/cyversevice/jupyterlab-base)
 
 # Instructions
 
