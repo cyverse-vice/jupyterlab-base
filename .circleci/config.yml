@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: cyversevice/jupyterlab-base:latest
+      - image: cyversevice/jupyterlab-base:1.0.5
     steps:
       - checkout
       - run: jupyter lab --version
