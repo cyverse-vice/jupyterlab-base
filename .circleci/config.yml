@@ -17,4 +17,3 @@ workflows:
     jobs:
       - build1
       - build2
-
