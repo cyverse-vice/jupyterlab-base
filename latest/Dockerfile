@@ -50,5 +50,8 @@ RUN pip install jupyterlab_irods==3.0.1 \
     && jupyter serverextension enable --py jupyterlab_irods \
     && jupyter labextension install ijab@3.0.1
 
-ENTRYPOINT ["jupyter"]
-CMD ["lab", "--no-browser"]
+ENTRYPOINT ["echo '{"irods_host": "data.cyverse.org", \
+                "irods_port": 1247, \
+                "irods_user_name": "$IPLANT_USER", \
+                "irods_zone_name": "iplant"}' | envsubst > $HOME/.irods/irods_environment.json \
+                && jupyter lab --no-browser"]
