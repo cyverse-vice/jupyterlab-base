@@ -49,6 +49,8 @@ RUN jupyter labextension install jupyterlab-gitlab
 RUN pip install jupyterlab_irods==3.0.1 \
     && jupyter serverextension enable --py jupyterlab_irods \
     && jupyter labextension install ijab@3.0.1
+    
+RUN mkdir -p /home/jovyan/.irods
 
 ENTRYPOINT ["echo '{"irods_host": "data.cyverse.org", \
                 "irods_port": 1247, \
