@@ -11,9 +11,16 @@ jobs:
     steps:
       - checkout
       - run: jupyter lab --version
+  build3:
+    docker:
+      - image: cyversevice/jupyterlab-base:1.0.9
+    steps:
+      - checkout
+      - run: jupyter lab --version
 workflows:
   version: 2
   build1_and_build2:
     jobs:
       - build1
       - build2
+      - build3
