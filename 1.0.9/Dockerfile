@@ -28,12 +28,22 @@ RUN pip install jupyterlab_irods \
     && jupyter serverextension enable --py jupyterlab_irods \
     && jupyter labextension install ijab
 
-# install jupyterlab hub-extension, lab-manager, bokeh, google-drive
+# install jupyterlab hub-extension, lab-manager, bokeh
 RUN jupyter lab --version \
     && jupyter labextension install @jupyterlab/hub-extension \
                                     @jupyter-widgets/jupyterlab-manager \
-                                    jupyterlab_bokeh \
-                                    @jupyterlab/google-drive
+                                    jupyterlab_bokeh 
+                              
+# install jupyterlab git extension
+RUN jupyter labextension install @jupyterlab/git && \
+        pip install --upgrade jupyterlab-git && \
+        jupyter serverextension enable --py jupyterlab_git
+
+# install jupyterlab github extension
+RUN jupyter labextension install @jupyterlab/github
+
+RUN useradd -d /home/jovyan -u 1000 jovyan
+
 USER jovyan
 
 COPY entry.sh /bin
