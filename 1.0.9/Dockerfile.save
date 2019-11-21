@@ -42,14 +42,7 @@ RUN jupyter labextension install @jupyterlab/git && \
 # install jupyterlab github extension
 RUN jupyter labextension install @jupyterlab/github
 
-# add Zsh kernel
-#RUN python3 -mpip install notebook zsh_jupyter_kernel && python3 -mzsh_jupyter_kernel.install --sys-prefix
-
-# add Bash kernel
-RUN pip install bash_kernel && python3 -m bash_kernel.install 
-
 RUN usermod -d /home/jovyan -u 1000 jovyan
-RUN chown -R jovyan:users /home/jovyan
 
 USER jovyan
 
